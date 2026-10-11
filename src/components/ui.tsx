@@ -36,8 +36,15 @@ export function Icon({ n, s = 18, fill = false }: { n: string; s?: number; fill?
 }
 
 export const SUPPORT_URL = "https://buymeacoffee.com/ashishbhoure";
-export function CoffeeButton({ className = "coffee-btn", label = "Buy me a coffee" }: { className?: string; label?: string }) {
-  return <a className={className} href={SUPPORT_URL} target="_blank" rel="noopener noreferrer" title="Support Skillverse on Buy Me a Coffee"><Icon n="coffee" s={16} /><span>{label}</span></a>;
+/** Official Buy Me a Coffee artwork. `responsive` swaps the wide button for the cup icon on narrower screens. */
+export function CoffeeButton({ height = 40, responsive = false }: { height?: number; responsive?: boolean }) {
+  const base = import.meta.env.BASE_URL;
+  return (
+    <a className="coffee-btn" href={SUPPORT_URL} target="_blank" rel="noopener noreferrer" aria-label="Buy me a coffee" title="Support Skillverse on Buy Me a Coffee">
+      <img className="bmc-wide" src={base + "img/bmc-button.png"} alt="Buy me a coffee" height={height} width={Math.round((height * 1090) / 306)} />
+      {responsive && <img className="bmc-icon" src={base + "img/bmc-logo.webp"} alt="" aria-hidden="true" width={height} height={height} />}
+    </a>
+  );
 }
 export const Dot = ({ c }: { c: string }) => <span className="dot" style={{ ["--c" as string]: c }} />;
 export const Bar = ({ pct, color }: { pct: number; color?: string }) => (

@@ -198,7 +198,7 @@ export default function Universe() {
           {([["done", "Completed"], ["progress", "In progress"], ["upcoming", "Upcoming skills"], ["links", "Prerequisite lines"]] as const).map(([k, l]) => (
             <button key={k} className="toggle-row" role="switch" aria-checked={layers[k]} onClick={() => setLayers((x) => ({ ...x, [k]: !x[k] }))}><span className="grow">{l}</span><span className={`switch ${layers[k] ? "on" : ""}`} /></button>))}
         </div>
-        <div className="side-card support"><span className="h3">Enjoying Skillverse?</span><span className="sub" style={{ fontSize: 12 }}>It is free and open source. A coffee helps keep it growing.</span><CoffeeButton className="btn coffee" /></div>
+        <div className="side-card support"><span className="h3">Enjoying Skillverse?</span><span className="sub" style={{ fontSize: 12 }}>It is free and open source. A coffee helps keep it growing.</span><CoffeeButton height={44} /></div>
       </aside>
 
       <div className={`canvas-wrap ${dragging ? "dragging" : ""}`} ref={wrap} tabIndex={0} onKeyDown={onKey} role="application" aria-label="Skill universe map. Drag to pan, scroll or pinch to zoom, plus and minus keys zoom, zero fits all." onDoubleClick={(e) => { if (!(e.target as Element).closest(".ov, .node, .cluster")) { const r = wrap.current!.getBoundingClientRect(); zoomAt(e.clientX - r.left, e.clientY - r.top, 1.6); } }}>

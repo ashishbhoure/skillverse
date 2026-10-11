@@ -216,9 +216,10 @@ input.field, select.field { height: 40px; padding: 0 14px; border-radius: var(--
 .detail > * { min-width: 0; }
 @media (max-width: 860px) { .rm-strip .eyebrow, .rm-strip > span.muted, .rm-head .grow { display: none; } .rm-head .btn, .rm-head .toggle-row { flex: none; } .rm-head > div:first-child { flex: 1 1 100%; } }
 
-.coffee-btn { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; border-radius: var(--r-m); background: #ffdd00; color: #1a1a1a; font-weight: 600; font-size: 13px; white-space: nowrap; transition: transform 0.1s, filter 0.15s; flex: none; }
-.coffee-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
-.btn.coffee { background: #ffdd00; color: #1a1a1a; font-weight: 600; } .btn.coffee:hover { filter: brightness(1.08); }
+.coffee-btn { display: inline-flex; flex: none; border-radius: 10px; overflow: hidden; transition: transform 0.1s, filter 0.15s; line-height: 0; }
+.coffee-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.coffee-btn img { display: block; border-radius: 10px; }
+.coffee-btn .bmc-icon { display: none; }
 .side-card.support { margin-top: auto; }
-@media (max-width: 1100px) { .coffee-btn span { display: none; } .coffee-btn { padding: 0 12px; } }
+@media (max-width: 1100px) { .coffee-btn .bmc-wide:not(:only-child) { display: none; } .coffee-btn .bmc-icon { display: block; } }
 @media (max-width: 860px) { .nav .coffee-btn { display: none; } }
