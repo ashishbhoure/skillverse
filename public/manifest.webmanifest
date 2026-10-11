@@ -1,0 +1,10 @@
+{
+  "name": "Skillverse",
+  "short_name": "Skillverse",
+  "description": "An interactive universe of web skills",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07070F",
+  "theme_color": "#07070F",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
