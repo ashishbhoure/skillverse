@@ -2,3 +2,4 @@ node_modules
 dist
 src/data/skills.generated.json
 *.log
+smoke-shots

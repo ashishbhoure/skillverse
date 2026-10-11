@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { useSummary } from "../lib/store";
-import { Icon } from "./ui";
+import { CoffeeButton, Icon } from "./ui";
 
 const TABS = [
   { to: "/", label: "Universe", end: true, icon: "universe" },
@@ -25,6 +25,7 @@ export function Nav({ onSearch }: { onSearch: () => void }) {
       <button className="search-btn" onClick={onSearch} aria-label="Search skills and resources" aria-keyshortcuts="Control+K Meta+K">
         <Icon n="search" s={16} /><span>Search skills, resources, topics…</span><span className="kbd" style={{ flex: "none" }}>Ctrl K</span>
       </button>
+      <CoffeeButton />
       <div className={`streak ${s.streak ? "" : "off"}`} title="Consecutive days with at least one completed resource"><Icon n="flame" s={14} fill /><span className="t">{s.streak ? `${s.streak}-day streak` : "Start a streak"}</span><span className="num mono">{s.streak}</span></div>
       <div className="avatar" aria-hidden="true">{Math.round((s.resourcesDone / s.resourcesTotal) * 100)}%</div>
     </header>

@@ -4,6 +4,8 @@ An interactive universe of web skills: a pannable, zoomable constellation of **2
 
 It is a rebuild of [Web Skills](https://andreasbm.github.io/web-skills/) by Andreas Mehlsen (MIT). The original 179 skills and their resources are reused with attribution; Skillverse adds 58 new skills (AI & LLM engineering, WebGPU, edge/cloud, Rust & WASM, modern CSS, security, local-first, mobile and more).
 
+<p align="center"><a href="https://buymeacoffee.com/ashishbhoure"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee" /></a></p>
+
 <p align="center"><img src="docs/screenshots/universe.png" alt="The Skillverse constellation map with 26 skill clusters" width="900" /></p>
 
 ## Screenshots

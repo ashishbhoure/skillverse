@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { categories, DATA, LEVEL_LABEL, skillsByCat } from "../lib/data";
 import { skillProgress, useStore } from "../lib/store";
-import { Dot, StatusBadge, toast } from "../components/ui";
+import { CoffeeButton, Dot, StatusBadge, toast } from "../components/ui";
 
 /** Accessible, searchable list of every skill: the non-visual alternative to the universe map. */
 export function ListView() {
@@ -47,6 +47,7 @@ export function Community() {
           <li>Role-based learning paths, a ⌘K command palette, per-resource progress, notes, streaks and achievements, all stored locally with export/import.</li>
           <li>Installable, works offline, and has an accessible list view for screen readers.</li>
         </ul></section>
+      <section className="sec card" style={{ padding: 22 }}><h2 className="h2">Support the project</h2><p className="sub" style={{ margin: 0, maxWidth: 640 }}>Skillverse is free, open source and has no ads or tracking. If it helps your learning, you can buy me a coffee. It is never required.</p><div><CoffeeButton className="btn coffee" label="Buy me a coffee" /></div></section>
       <section className="sec"><h2 className="h2">Credits</h2><p className="sub" style={{ margin: 0 }}>The original {DATA.stats.skills - DATA.stats.emerging} skills and their resource lists come from <a href="https://github.com/andreasbm/web-skills" target="_blank" rel="noopener noreferrer" style={{ color: "var(--glow)" }}>Web Skills by Andreas Mehlsen</a> (MIT licence). Skillverse adds new tracks, a new layout and new features. Resource durations and levels are estimates.</p></section>
     </div></div>
   );

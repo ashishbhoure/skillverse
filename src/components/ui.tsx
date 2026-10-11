@@ -24,7 +24,8 @@ const P: Record<string, string> = {
   list: "M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01",
   bookmark: "M6 3h12v18l-6-4-6 4z",
   send: "M12 19V5m-6 6 6-6 6 6",
-  spark: "m12 3 2 6 6 2-6 2-2 6-2-6-6-2 6-2z"
+  spark: "m12 3 2 6 6 2-6 2-2 6-2-6-6-2 6-2z",
+  coffee: "M17 8h1a4 4 0 0 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8ZM6 2v3M10 2v3M14 2v3"
 };
 export function Icon({ n, s = 18, fill = false }: { n: string; s?: number; fill?: boolean }) {
   return (
@@ -34,6 +35,10 @@ export function Icon({ n, s = 18, fill = false }: { n: string; s?: number; fill?
   );
 }
 
+export const SUPPORT_URL = "https://buymeacoffee.com/ashishbhoure";
+export function CoffeeButton({ className = "coffee-btn", label = "Buy me a coffee" }: { className?: string; label?: string }) {
+  return <a className={className} href={SUPPORT_URL} target="_blank" rel="noopener noreferrer" title="Support Skillverse on Buy Me a Coffee"><Icon n="coffee" s={16} /><span>{label}</span></a>;
+}
 export const Dot = ({ c }: { c: string }) => <span className="dot" style={{ ["--c" as string]: c }} />;
 export const Bar = ({ pct, color }: { pct: number; color?: string }) => (
   <div className="bar" role="progressbar" aria-valuenow={Math.round(pct * 100)} aria-valuemin={0} aria-valuemax={100}>
