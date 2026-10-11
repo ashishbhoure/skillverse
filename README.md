@@ -86,6 +86,6 @@ src/
 scripts/      data pipeline + browser smoke test
 ```
 
-## Credits and licence
+<!--  ## Credits and licence
 
-Original skill data: [andreasbm/web-skills](https://github.com/andreasbm/web-skills), MIT © Andreas Mehlsen. Fonts: Space Grotesk, Inter, JetBrains Mono (Google Fonts, loaded from the CDN).
+Original skill data: [andreasbm/web-skills](https://github.com/andreasbm/web-skills), MIT © Andreas Mehlsen. Fonts: Space Grotesk, Inter, JetBrains Mono (Google Fonts, loaded from the CDN). -->
